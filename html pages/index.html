@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD231 Course Home Page with Buenos Aires Chamber theme">
+  <meta name="author" content="Your Name">
+  <title>WDD231 Course Home – Buenos Aires Chamber</title>
+
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.svg" alt="Buenos Aires Chamber Logo" id="logo">
+    <span id="siteowner">Your Name</span>
+    <button id="hamburger">&#9776;</button>
+    <nav id="navMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chamber.html">Chamber</a></li>
+        <li><a href="final.html">Final</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section>
+      <h2>Buenos Aires Chamber</h2>
+      <p>Welcome to the Buenos Aires Chamber of Commerce. Here you can find business spotlights, upcoming events, and community resources.</p>
+    </section>
+
+    <section>
+      <h2>Community & Weather</h2>
+      <p>Basic weather information for Buenos Aires will be displayed here.</p>
+    </section>
+
+    <section>
+      <h2>Course List</h2>
+      <div id="courseFilters">
+        <button data-filter="all">All Courses</button>
+        <button data-filter="WDD">WDD Courses</button>
+        <button data-filter="CSE">CSE Courses</button>
+      </div>
+      <div id="courseList"></div>
+      <p>Total Credits: <span id="totalCredits">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      <a href="https://github.com/Sepurukuri" target="_blank">GitHub</a> |
+      <a href="www.linkedin.com/in/santiago-cuadrado-7a82b81a4" target="_blank">LinkedIn</a>
+    </p>
+    <p>&copy; <span id="currentYear"></span> Your Name, Argentina</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

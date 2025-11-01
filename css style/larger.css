@@ -1,0 +1,10 @@
+@media screen and (min-width: 600px) {
+  nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+}

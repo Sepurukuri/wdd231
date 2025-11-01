@@ -1,0 +1,40 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #0b4f6c;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0.5rem 0;
+}
+
+#hamburger {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
