@@ -3,65 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Buenos Aires Chamber of Commerce - promoting local business and community">
+    <meta name="description" content="Buenos Aires Chamber of Commerce: Connecting local businesses, fostering growth, and promoting community.">
     <meta name="author" content="Santiago Cuadrado">
-    <title>Buenos Aires Chamber</title>
+    <title>Buenos Aires Chamber of Commerce</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/date.js" defer></script>
+
+    <script defer src="scripts/navigation.js"></script>
+    <script defer src="scripts/date.js"></script>
+    <script defer src="scripts/course.js"></script>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="images/logo-ba.svg" alt="Buenos Aires Chamber Logo" class="logo">
-            <span class="site-name">Buenos Aires Chamber</span>
+        <div class="logo">
+            <img src="images/buenosaires-logo.svg" alt="Buenos Aires Chamber Logo" width="80">
+            <span>Buenos Aires Chamber</span>
         </div>
-        <button class="menu-toggle" aria-label="Toggle navigation">
-            ☰
-        </button>
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+        <nav>
+            <button class="hamburger" aria-label="Open Menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="chamber.html">Chamber</a></li>
-                <li><a href="final.html">Final</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="final.html">Final Project</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Welcome to the Buenos Aires Chamber</h1>
-
-        <section>
-            <h2>Community Spotlight</h2>
-            <p>Discover businesses, events, and services that make Buenos Aires thrive.</p>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Buenos Aires Chamber of Commerce</h1>
+                <p>Connecting businesses, fostering growth, and promoting our vibrant community.</p>
+                <a href="#directory" class="cta-btn">Explore Local Businesses</a>
+            </div>
         </section>
 
-        <section>
-            <h2>Weather</h2>
-            <p>Basic weather info goes here.</p>
+        <section class="spotlight">
+            <h2>Business Spotlights</h2>
+            <div class="spotlight-cards">
+                <div class="card">
+                    <img src="images/business1.jpg" alt="Business 1">
+                    <h3>Local Cafe</h3>
+                    <p>Discover Buenos Aires' finest coffee spots and networking opportunities.</p>
+                </div>
+                <div class="card">
+                    <img src="images/business2.jpg" alt="Business 2">
+                    <h3>Artisanal Boutique</h3>
+                    <p>Supporting small business creativity and local craftsmanship.</p>
+                </div>
+                <div class="card">
+                    <img src="images/business3.jpg" alt="Business 3">
+                    <h3>Tech Startup</h3>
+                    <p>Innovative solutions for the Buenos Aires business ecosystem.</p>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Directory</h2>
-            <p>Find local businesses in our comprehensive directory.</p>
+        <section class="discover">
+            <h2>Discover Buenos Aires</h2>
+            <p>Explore the history, demographics, and vibrant culture of our city. Attend local events and learn about opportunities for businesses and residents alike.</p>
+            <img src="images/city.jpg" alt="Buenos Aires Cityscape">
+        </section>
+
+        <section id="directory" class="directory">
+            <h2>Business Directory</h2>
+            <p>Browse local businesses that are members of the Buenos Aires Chamber of Commerce.</p>
+            <div class="directory-list">
+            </div>
+        </section>
+        
+        <section class="join">
+            <h2>Join the Chamber</h2>
+            <p>Discover the benefits of becoming a member. Choose from Non-Profit, Silver, or Gold membership levels.</p>
+            <a href="join.html" class="cta-btn">Apply Now</a>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <div class="social">
-            <a href="https://github.com/YourUsername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/YourUsername" target="_blank">LinkedIn</a>
-            <a href="#" target="_blank">Twitter</a>
+        <div class="social-links">
+            <a href="https://github.com/Sepurukuri" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/yourprofile/" target="_blank">LinkedIn</a>
+            <a href="#">Twitter</a>
         </div>
-        <div class="copyright">
-            &copy; <span id="currentyear"></span> Santiago Cuadrado, Buenos Aires, Argentina
+        <div class="footer-info">
+            <p>&copy; <span id="currentyear"></span> Buenos Aires Chamber of Commerce</p>
+            <p>Author: Santiago Cuadrado, Buenos Aires, Argentina</p>
         </div>
         <div class="last-modified">
-            Last Modified: <span id="lastModified"></span>
+            <p>Last Modified: <span id="lastModified"></span></p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
 </body>
 </html>
