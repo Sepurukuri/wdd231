@@ -16,6 +16,20 @@ body{
   line-height:1.5;
   -webkit-font-smoothing:antialiased;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container{ max-width:1100px; margin:0 auto; padding:1rem; }
 
 /* Skip link */

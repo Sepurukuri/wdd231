@@ -14,9 +14,9 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
 
-  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/navegation.js"></script>
   <script defer src="scripts/date.js"></script>
-  <script defer src="scripts/course.js"></script>
+  <script defer src="scripts/courses.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -48,8 +48,12 @@
   </header>
 
   <main id="main" class="site-main container">
+
     <section class="hero" aria-labelledby="hero-heading">
-      <h1 id="hero-heading">WDD 231 – Home</h1>
+      <header aria-label="WDD 231 Home Introduction">
+        <h1 id="hero-heading">WDD 231 – Home</h1>
+        <h2 class="visually-hidden">Welcome to WDD 231</h2>
+      </header>
       <p class="lead">Welcome — this page demonstrates responsive HTML, CSS, and JavaScript for WDD 231. Use the Course List below to filter and track credits.</p>
       <a class="cta-btn" href="#courses">View Courses</a>
     </section>
@@ -58,7 +62,6 @@
       <h2 id="welcome-heading">Welcome</h2>
       <p>Hi — I'm Santiago Cuadrado. This page demonstrates the required skills for WDD 231: semantic markup, responsive CSS, accessibility considerations, and dynamic JavaScript.</p>
     </section>
-
 
     <section id="courses" class="courses" aria-labelledby="courses-heading">
       <h2 id="courses-heading">Course List — Web & Computer Programming Certificate</h2>
@@ -95,7 +98,7 @@
 
     <section class="about" aria-labelledby="about-heading">
       <h2 id="about-heading">About</h2>
-      <p>This project is prepared for Lighthouse auditing, accessibility checks, and grading against the course rubric.</p>
+      <p>This project demonstrates the W01 requirements and is prepared for Lighthouse auditing, accessibility checks, and grading against the course rubric.</p>
     </section>
   </main>
 
