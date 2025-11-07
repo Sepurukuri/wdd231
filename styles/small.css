@@ -1,180 +1,93 @@
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* { box-sizing: border-box; }
+:root{
+  --blue:#003366;
+  --accent:#ffcc00;
+  --muted:#f5f5f5;
+  --text:#222;
+  --card-bg:#ffffff;
+  --radius:12px;
+}
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial;
+  color:var(--text);
+  background:var(--muted);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.container{ max-width:1100px; margin:0 auto; padding:1rem; }
+
+/* Skip link */
+.skip-link{
+  position: absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus{
+  position:static; width:auto; height:auto; padding:.5rem .75rem; background:var(--blue); color:var(--accent); z-index:999;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+/* Header */
+.site-header{ background:var(--blue); color:white; }
+.header-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.75rem 1rem; gap:1rem;
 }
+.logo{ display:flex; align-items:center; gap:.6rem; }
+.logo svg{ border-radius:50%; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+.site-title{ font-weight:700; font-size:1rem; color:white; display:inline-block; }
+.site-sub{ font-weight:400; font-size:.9rem; opacity:.95; margin-left:.35rem; color:#e6f2ff; }
+.separator{ margin:0 .5rem; color:#ccdff6; }
 
-a {
-    text-decoration: none;
-    color: #0077cc;
+/* Nav */
+.primary-nav{ position:relative; }
+.hamburger{
+  font-size:1.4rem; background:none;border:0;color:white;padding:.25rem .5rem; cursor:pointer;
 }
+.nav-links{
+  display:none;
+  position:absolute; right:0; top:100%; margin-top:.4rem;
+  background:var(--blue); list-style:none; padding:.25rem 0; border-radius:8px; min-width:180px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+.nav-links li a{
+  display:block; padding:.6rem 1rem; color:white; text-decoration:none; font-weight:600;
+}
+.nav-links li a:focus, .nav-links li a:hover { background:#002244; }
 
-a:hover {
-    color: #005fa3;
-}
+/* Hero */
+.hero{ background-color: #0b2b4a; color:white; padding:3rem 1rem; text-align:center; }
+.hero .hero-inner{ max-width:900px; margin:0 auto; }
+.hero h1{ font-size:1.6rem; margin:0 0 .5rem; color:var(--accent); }
+.lead{ font-size:1rem; margin-bottom:1rem; color:#e6f2ff; }
+.cta-btn{ background:var(--accent); color:var(--blue); padding:.6rem 1rem; border-radius:8px; font-weight:700; display:inline-block; text-decoration:none; }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #003366;
-    color: white;
-    padding: 1rem;
+/* Courses section */
+.courses{ background:transparent; padding:1.25rem 0; }
+.course-filters{ display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1rem; }
+.filter-btn{
+  background:white; border:1px solid #d8e6ff; padding:.5rem .75rem; border-radius:8px; cursor:pointer; font-weight:600;
 }
+.filter-btn[aria-pressed="true"], .filter-btn:focus{ background:var(--blue); color:var(--accent); border-color:var(--blue); outline:none; }
 
-header .logo span {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-left: 0.5rem;
+.course-list{
+  display:grid; grid-template-columns:1fr; gap:1rem;
 }
+.courseCard{
+  background:var(--card-bg); padding:1rem; border-radius:var(--radius); box-shadow:0 6px 18px rgba(0,0,0,0.06); display:flex; flex-direction:column; gap:.25rem;
+}
+.courseCard.completed{ border-left:6px solid var(--accent); }
+.courseCard .code{ font-weight:700; color:var(--blue); }
+.courseCard .meta{ font-size:.95rem; color:#555; }
 
-nav .nav-links {
-    display: none;
-    flex-direction: column;
-    list-style: none;
-    background-color: #003366;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-}
+.credits-summary{ margin-top:1rem; font-size:1rem; }
 
-nav .nav-links li {
-    border-bottom: 1px solid #0055a5;
-}
+/* Footer */
+.site-footer{ background:var(--blue); color:white; padding:1.25rem 1rem; }
+.footer-inner{ display:flex; flex-direction:column; gap:.75rem; align-items:center; text-align:center; }
+.site-footer a{ color:var(--accent); text-decoration:none; margin:0 .4rem; }
+.site-footer a:hover{ text-decoration:underline; }
 
-nav .nav-links li a {
-    display: block;
-    padding: 0.8rem;
-    color: white;
-}
+a:focus, button:focus { outline:3px solid rgba(0,90,160,0.18); outline-offset:2px; }
 
-nav .hamburger {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.hero {
-    background: url('../images/city.jpg') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 4rem 1rem;
-}
-
-.hero h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #ffffff;
-}
-
-.hero p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-}
-
-.cta-btn {
-    display: inline-block;
-    background-color: #ffcc00;
-    color: #003366;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.cta-btn:hover {
-    background-color: #e6b800;
-}
-
-.spotlight {
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-.spotlight h2 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: #003366;
-}
-
-.spotlight-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.card {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    padding: 1rem;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.discover {
-    background-color: #e6f2ff;
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-.discover img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 1rem;
-}
-
-.directory {
-    padding: 2rem 1rem;
-    background-color: #fff;
-    text-align: center;
-}
-
-.join {
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-.join .cta-btn {
-    margin-top: 1rem;
-}
-
-footer {
-    background-color: #003366;
-    color: white;
-    padding: 1.5rem 1rem;
-    text-align: center;
-}
-
-footer a {
-    color: #ffcc00;
-    margin: 0 0.5rem;
-}
-
-footer a:hover {
-    color: #e6b800;
-}
-
-footer .footer-info,
-footer .last-modified {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-}
+.nav-open .nav-links{ display:block; }

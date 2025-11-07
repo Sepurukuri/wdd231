@@ -1,104 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Buenos Aires Chamber of Commerce: Connecting local businesses, fostering growth, and promoting community.">
-    <meta name="author" content="Santiago Cuadrado">
-    <title>Buenos Aires Chamber of Commerce</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Santiago Cuadrado — WDD 231 Course Home Page. Course list, progress, and resources." />
+  <meta name="author" content="Santiago Cuadrado" />
+  <title>Santiago Cuadrado | WDD 231 Home</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
 
-    <script defer src="scripts/navigation.js"></script>
-    <script defer src="scripts/date.js"></script>
-    <script defer src="scripts/course.js"></script>
+  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/course.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/bsaslogo.jpg" alt="Buenos Aires Chamber Logo" width="80">
-            <span>Buenos Aires Chamber</span>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="logo" id="site-logo" aria-hidden="false">
+        <svg width="56" height="56" viewBox="0 0 100 100" role="img" aria-labelledby="logoTitle logoDesc">
+          <title id="logoTitle">SC logo</title>
+          <desc id="logoDesc">Circle logo with initials S C</desc>
+          <circle cx="50" cy="50" r="48" fill="#003366" />
+          <text x="50" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-size="44" fill="#ffcc00" font-weight="700">SC</text>
+        </svg>
+        <span class="site-title">Santiago Cuadrado <span class="separator">|</span> <span class="site-sub">WDD 231 Home</span></span>
+      </div>
+
+      <nav class="primary-nav" role="navigation" aria-label="Main Navigation">
+        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+          <span class="hamburger-icon" aria-hidden="true">&#9776;</span>
+        </button>
+
+        <ul id="primary-navigation" class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="chamber.html">Chamber</a></li>
+          <li><a href="final.html">Final Project</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner container">
+        <h1 id="hero-heading">WDD 231 – Home</h1>
+        <p class="lead">Welcome — this page demonstrates responsive HTML, CSS, and JavaScript for the course. Use the Course List below to filter and track credits.</p>
+        <a class="cta-btn" href="#courses">View Courses</a>
+      </div>
+    </section>
+
+    <section id="courses" class="courses" aria-labelledby="courses-heading">
+      <div class="container">
+        <h2 id="courses-heading">Course List — Web & Computer Programming Certificate</h2>
+
+        <div id="courseFilters" class="course-filters" role="region" aria-label="Course filters">
+          <button type="button" data-filter="all" class="filter-btn" aria-pressed="true">All Courses</button>
+          <button type="button" data-filter="WDD" class="filter-btn" aria-pressed="false">WDD Courses</button>
+          <button type="button" data-filter="CSE" class="filter-btn" aria-pressed="false">CSE Courses</button>
         </div>
-        <nav>
-            <button class="hamburger" aria-label="Open Menu">&#9776;</button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="chamber.html">Chamber</a></li>
-                <li><a href="final.html">Final Project</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Buenos Aires Chamber of Commerce</h1>
-                <p>Connecting businesses, fostering growth, and promoting our vibrant community.</p>
-                <a href="#directory" class="cta-btn">Explore Local Businesses</a>
-            </div>
-        </section>
+        <div id="courseList" class="course-list" aria-live="polite"></div>
 
-        <section class="spotlight">
-            <h2>Business Spotlights</h2>
-            <div class="spotlight-cards">
-                <div class="card">
-                    <img src="images/business1.jpg" alt="Business 1">
-                    <h3>Local Cafe</h3>
-                    <p>Discover Buenos Aires' finest coffee spots and networking opportunities.</p>
-                </div>
-                <div class="card">
-                    <img src="images/business2.jpg" alt="Business 2">
-                    <h3>Artisanal Boutique</h3>
-                    <p>Supporting small business creativity and local craftsmanship.</p>
-                </div>
-                <div class="card">
-                    <img src="images/business3.jpg" alt="Business 3">
-                    <h3>Tech Startup</h3>
-                    <p>Innovative solutions for the Buenos Aires business ecosystem.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="discover">
-            <h2>Discover Buenos Aires</h2>
-            <p>Explore the history, demographics, and vibrant culture of our city. Attend local events and learn about opportunities for businesses and residents alike.</p>
-        </section>
-
-        <section id="directory" class="directory">
-            <h2>Business Directory</h2>
-            <p>Browse local businesses that are members of the Buenos Aires Chamber of Commerce.</p>
-            <div class="directory-list">
-            </div>
-        </section>
-        
-        <section class="join">
-            <h2>Join the Chamber</h2>
-            <p>Discover the benefits of becoming a member. Choose from Non-Profit, Silver, or Gold membership levels.</p>
-            <a href="join.html" class="cta-btn">Apply Now</a>
-        </section>
-    </main>
-
-    <footer>
-        <div class="social-links">
-            <a href="https://github.com/Sepurukuri" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/yourprofile/" target="_blank">LinkedIn</a>
-            <a href="#">Twitter</a>
+        <div class="credits-summary" aria-live="polite">
+          <strong>Total Credits:</strong> <span id="totalCredits">0</span>
         </div>
-        <div class="footer-info">
-            <p>&copy; <span id="currentyear"></span> Buenos Aires Chamber of Commerce</p>
-            <p>Author: Santiago Cuadrado, Buenos Aires, Argentina</p>
-        </div>
-        <div class="last-modified">
-            <p>Last Modified: <span id="lastModified"></span></p>
-        </div>
-    </footer>
+      </div>
+    </section>
 
-    <script>
-        document.getElementById("currentyear").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent = document.lastModified;
-    </script>
+    <section class="about" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading">About</h2>
+        <p>This page demonstrates semantic markup, accessible navigation, dynamic course rendering, and responsive design required by the W01 assignment.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="social" aria-label="Social links">
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a>
+      </div>
+
+      <div class="footer-meta">
+        <p>&copy; <span id="currentyear"></span> Santiago Cuadrado</p>
+        <p>Buenos Aires, Argentina</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
