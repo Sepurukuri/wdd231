@@ -7,6 +7,8 @@
   <meta name="author" content="Santiago Cuadrado" />
   <title>Santiago Cuadrado | WDD 231 Home</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/small.css">
@@ -45,42 +47,59 @@
     </div>
   </header>
 
-  <main id="main" class="site-main">
+  <main id="main" class="site-main container">
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-inner container">
-        <h1 id="hero-heading">WDD 231 – Home</h1>
-        <p class="lead">Welcome — this page demonstrates responsive HTML, CSS, and JavaScript for the course. Use the Course List below to filter and track credits.</p>
-        <a class="cta-btn" href="#courses">View Courses</a>
+      <h1 id="hero-heading">WDD 231 – Home</h1>
+      <p class="lead">Welcome — this page demonstrates responsive HTML, CSS, and JavaScript for WDD 231. Use the Course List below to filter and track credits.</p>
+      <a class="cta-btn" href="#courses">View Courses</a>
+    </section>
+
+    <section class="welcome" aria-labelledby="welcome-heading">
+      <h2 id="welcome-heading">Welcome</h2>
+      <p>Hi — I'm Santiago Cuadrado. This page demonstrates the required skills for WDD 231: semantic markup, responsive CSS, accessibility considerations, and dynamic JavaScript.</p>
+    </section>
+
+
+    <section id="courses" class="courses" aria-labelledby="courses-heading">
+      <h2 id="courses-heading">Course List — Web & Computer Programming Certificate</h2>
+
+      <div id="courseFilters" class="course-filters" role="region" aria-label="Course filters">
+        <button type="button" data-filter="all" class="filter-btn" aria-pressed="true">All Courses</button>
+        <button type="button" data-filter="WDD" class="filter-btn" aria-pressed="false">WDD Courses</button>
+        <button type="button" data-filter="CSE" class="filter-btn" aria-pressed="false">CSE Courses</button>
+      </div>
+
+      <div id="courseList" class="course-list" aria-live="polite"></div>
+
+      <div class="credits-summary" aria-live="polite">
+        <strong>Total Credits:</strong> <span id="totalCredits">0</span>
       </div>
     </section>
 
-    <section id="courses" class="courses" aria-labelledby="courses-heading">
-      <div class="container">
-        <h2 id="courses-heading">Course List — Web & Computer Programming Certificate</h2>
+    <section class="resources" aria-labelledby="resources-heading">
+      <h2 id="resources-heading">Resources</h2>
+      <p>Helpful links for the course and web development:</p>
+      <ul>
+        <li><a href="https://byui.instructure.com/courses/REPLACE_WITH_YOUR_COURSE_ID" target="_blank" rel="noopener noreferrer">WDD 231 Canvas Course (replace with your course URL)</a></li>
+        <li><a href="https://www.byui.edu" target="_blank" rel="noopener noreferrer">BYU-Idaho</a></li>
+        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+        <li><a href="https://www.w3.org/" target="_blank" rel="noopener noreferrer">W3C Standards</a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </section>
 
-        <div id="courseFilters" class="course-filters" role="region" aria-label="Course filters">
-          <button type="button" data-filter="all" class="filter-btn" aria-pressed="true">All Courses</button>
-          <button type="button" data-filter="WDD" class="filter-btn" aria-pressed="false">WDD Courses</button>
-          <button type="button" data-filter="CSE" class="filter-btn" aria-pressed="false">CSE Courses</button>
-        </div>
-
-        <div id="courseList" class="course-list" aria-live="polite"></div>
-
-        <div class="credits-summary" aria-live="polite">
-          <strong>Total Credits:</strong> <span id="totalCredits">0</span>
-        </div>
-      </div>
+    <section class="goals" aria-labelledby="goals-heading">
+      <h2 id="goals-heading">Goals</h2>
+      <p>My goals for this course: build accessible, responsive web pages; master semantic HTML and modern JavaScript; and deploy to GitHub Pages.</p>
     </section>
 
     <section class="about" aria-labelledby="about-heading">
-      <div class="container">
-        <h2 id="about-heading">About</h2>
-        <p>This page demonstrates semantic markup, accessible navigation, dynamic course rendering, and responsive design required by the W01 assignment.</p>
-      </div>
+      <h2 id="about-heading">About</h2>
+      <p>This project demonstrates the W01 requirements and is prepared for Lighthouse auditing, accessibility checks, and grading against the course rubric.</p>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="footer-inner container">
       <div class="social" aria-label="Social links">
         <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
