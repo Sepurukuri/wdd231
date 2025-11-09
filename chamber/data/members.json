@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Café del Puerto",
+    "address": "123 Puerto St, Buenos Aires",
+    "phone": "+54 11 5555 0001",
+    "website": "https://example.com/cafedelpuerto",
+    "image": "cafedelpuerto.jpg",
+    "membershipLevel": 2,
+    "notes": "Cozy cafe and meeting spot"
+  },
+  {
+    "name": "Arte & Co Boutique",
+    "address": "45 San Martin Ave, Buenos Aires",
+    "phone": "+54 11 5555 0002",
+    "website": "https://example.com/arteco",
+    "image": "arteco.jpg",
+    "membershipLevel": 1,
+    "notes": "Local handcrafted goods"
+  },
+  {
+    "name": "PortTech Solutions",
+    "address": "201 Tech Park, Buenos Aires",
+    "phone": "+54 11 5555 0003",
+    "website": "https://example.com/porttech",
+    "image": "porttech.jpg",
+    "membershipLevel": 3,
+    "notes": "Startup focused on port logistics"
+  },
+  {
+    "name": "Riverfront Tours",
+    "address": "Pier 4, Buenos Aires",
+    "phone": "+54 11 5555 0004",
+    "website": "https://example.com/riverfront",
+    "image": "riverfront.jpg",
+    "membershipLevel": 1,
+    "notes": "Guided tours of the port and river"
+  },
+  {
+    "name": "Gran Mercado",
+    "address": "88 Market Rd, Buenos Aires",
+    "phone": "+54 11 5555 0005",
+    "website": "https://example.com/granmercado",
+    "image": "granmercado.jpg",
+    "membershipLevel": 3,
+    "notes": "Large local produce market"
+  },
+  {
+    "name": "Studio Luz Photography",
+    "address": "12 Foto Lane, Buenos Aires",
+    "phone": "+54 11 5555 0006",
+    "website": "https://example.com/studioluz",
+    "image": "studioluz.jpg",
+    "membershipLevel": 2,
+    "notes": "Event and portrait photographer"
+  },
+  {
+    "name": "Andes Legal",
+    "address": "200 Law Plaza, Buenos Aires",
+    "phone": "+54 11 5555 0007",
+    "website": "https://example.com/andeslegal",
+    "image": "andeslegal.jpg",
+    "membershipLevel": 1,
+    "notes": "Legal services for small businesses"
+  }
+]

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buenos Aires Chamber — Directory</title>
+  <meta name="description" content="Business directory for the Buenos Aires Chamber of Commerce — local members, contact info, and membership level." />
+  <meta name="author" content="Santiago Cuadrado" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Buenos Aires Chamber — Directory" />
+  <meta property="og:description" content="Find chamber members, their contact info, membership levels, and websites." />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="https://yourgithubusername.github.io/wdd231/chamber/directory.html" />
+
+  <link rel="stylesheet" href="styles/normalize.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/chamber.css">
+
+  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/directory.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="index.html" class="logo-link" aria-label="Buenos Aires Chamber Home">
+          <svg width="48" height="48" viewBox="0 0 100 100" role="img" aria-labelledby="logoTitle logoDesc">
+            <title id="logoTitle">Buenos Aires Chamber logo</title>
+            <desc id="logoDesc">Circle with BA initials</desc>
+            <circle cx="50" cy="50" r="48" fill="#003366" />
+            <text x="50" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-size="36" fill="#ffcc00" font-weight="700">BA</text>
+          </svg>
+        </a>
+        <div class="site-title-group">
+          <span class="site-title">Buenos Aires Chamber</span>
+          <span class="site-sub">Directory</span>
+        </div>
+      </div>
+
+      <nav class="primary-nav" role="navigation" aria-label="Primary Navigation">
+        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+        <ul id="primary-navigation" class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="directory.html" aria-current="page">Directory</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+      <h1>Member Directory</h1>
+      <p class="lead">Browse chamber members. Toggle between card (grid) view and list view. Click a company's website to visit them.</p>
+
+      <div class="view-controls" role="region" aria-label="Display type controls">
+        <div class="filter-group">
+          <label for="membershipFilter">Membership level:</label>
+          <select id="membershipFilter" name="membershipFilter" aria-label="Filter by membership level">
+            <option value="all">All</option>
+            <option value="3">Gold</option>
+            <option value="2">Silver</option>
+            <option value="1">Member</option>
+          </select>
+        </div>
+
+        <div class="display-toggle" role="group" aria-label="Toggle display">
+          <button id="gridBtn" class="toggle-btn" aria-pressed="true" title="Grid view">Grid</button>
+          <button id="listBtn" class="toggle-btn" aria-pressed="false" title="List view">List</button>
+        </div>
+      </div>
+
+      <section id="members" class="members" aria-live="polite" aria-label="Chamber members list">
+        <div id="membersList" class="members-grid" role="list"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="contact">
+        <p><strong>Buenos Aires Chamber of Commerce</strong></p>
+        <p>Contact: Santiago Cuadrado — <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p>WDD 231 — Web & Computer Programming</p>
+      </div>
+
+      <div class="footer-meta">
+        <p>&copy; <span id="currentYear"></span> Buenos Aires Chamber</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
