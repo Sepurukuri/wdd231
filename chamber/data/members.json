@@ -61,5 +61,14 @@
     "image": "andeslegal.png",
     "membershipLevel": 1,
     "notes": "Legal services for small businesses"
-  }
+  },
+  {
+  "name": "PortTech Solutions",
+  "address": "201 Tech Park, Buenos Aires",
+  "phone": "+54 11 5555 0003",
+  "website": "https://example.com/porttech",
+  "image": "porttech.png",
+  "membershipLevel": 3,
+  "notes": "Startup focused on port logistics"
+}
 ]

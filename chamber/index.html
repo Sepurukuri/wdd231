@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buenos Aires Chamber — Home</title>
+  <meta name="description" content="Buenos Aires Chamber of Commerce — supporting local business, events, and community growth." />
+  <meta name="author" content="Santiago Cuadrado" />
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Buenos Aires Chamber — Home" />
+  <meta property="og:description" content="Connecting businesses, events, and resources in Buenos Aires." />
+  <meta property="og:image" content="https://Sepurukuri.github.io/wdd231/chamber/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Buenos Aires Chamber — Member Directory" />
+  <meta property="og:url" content="https://Sepurukuri.github.io/wdd231/chamber/index.html" />
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/chamber.css">
+
+  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/weather.js"></script>
+  <script defer src="scripts/spotlights.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="index.html" class="logo-link" aria-label="Buenos Aires Chamber Home">
+          <svg width="48" height="48" viewBox="0 0 100 100" role="img" aria-labelledby="logoTitle logoDesc">
+            <title id="logoTitle">SC Logo</title>
+            <desc id="logoDesc">Name inicials</desc>
+            <circle cx="50" cy="50" r="48" fill="#003366" />
+            <text x="50" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-size="36" fill="#ffcc00" font-weight="700">BA</text>
+          </svg>
+        </a>
+        <div class="site-title-group">
+          <span class="site-title">Buenos Aires Chamber</span>
+          <span class="site-sub">Home</span>
+        </div>
+      </div>
+
+      <nav class="primary-nav" role="navigation" aria-label="Primary Navigation">
+        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+        <ul id="primary-navigation" class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="home-main container">
+    <section class="hero" aria-labelledby="hero-heading">
+      <header aria-label="WDD 231 Home Introduction">
+        <h1 id="hero-heading">Supporting Local Business & Community Growth</h1>
+      </header>
+
+      <div class="hero-visual">
+        <img src="images/og-image.jpg" alt="Buenos Aires skyline and chamber" class="hero-image">
+        <div class="hero-overlay">
+          <a href="join.html" class="cta-button">Join the Chamber</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="events" aria-labelledby="events-heading">
+      <h2 id="events-heading">Current Events</h2>
+      <article class="event">
+        <h3>Business Networking Night</h3>
+        <p>March 14, 2025 — Buenos Aires Cultural Center</p>
+        <p>Connect with local business owners and community leaders.</p>
+      </article>
+    </section>
+
+    <section class="weather" aria-labelledby="weather-heading">
+      <h2 id="weather-heading">Today's Weather</h2>
+      <p><span id="temp">--</span>°C — <span id="desc">Loading...</span></p>
+      <h3>3-Day Forecast</h3>
+      <ul id="forecast" class="forecast-list" aria-live="polite"></ul>
+    </section>
+
+    <section class="spotlights" aria-labelledby="spotlights-heading">
+      <h2 id="spotlights-heading">Member Spotlights</h2>
+      <div id="spotlight-container" class="spotlight-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="contact">
+        <p><strong>Buenos Aires Chamber of Commerce</strong></p>
+        <p>Contact: Santiago Cuadrado — <a href="mailto:youremail@example.com">santiagocuadradosud247@gmail.com</a></p>
+        <p>WDD 231 — Web & Computer Programming</p>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; <span id="currentYear"></span> Buenos Aires Chamber</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
