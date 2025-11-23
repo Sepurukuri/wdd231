@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank you — Buenos Aires Chamber</title>
+  <meta name="description" content="Thank you for applying to join the Buenos Aires Chamber." />
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/chamber.css">
+  <link rel="stylesheet" href="styles/join.css">
+  <script defer src="scripts/thankyou.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="index.html" class="logo-link" aria-label="Buenos Aires Chamber Home">
+          <svg width="48" height="48" viewBox="0 0 100 100" role="img" aria-labelledby="logoTitle2 logoDesc2">
+            <title id="logoTitle2">BA Chamber logo</title>
+            <desc id="logoDesc2">Circle with BA initials</desc>
+            <circle cx="50" cy="50" r="48" fill="#003366" />
+            <text x="50" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-size="36" fill="#ffcc00" font-weight="700">BA</text>
+          </svg>
+        </a>
+        <div class="site-title-group">
+          <span class="site-title">Buenos Aires Chamber</span>
+          <span class="site-sub">Thank You</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Thank you for your application</h1>
+    <p class="lead">We received your submission. Below is a summary of your required information.</p>
+
+    <div id="summary" class="summary-card" role="region" aria-live="polite">
+    </div>
+
+    <p><a href="index.html">Return to Home</a> • <a href="join.html">Submit another application</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-meta">
+        <p>&copy; <span id="currentYear"></span> Buenos Aires Chamber</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

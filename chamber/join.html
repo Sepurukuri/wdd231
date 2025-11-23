@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Join — Buenos Aires Chamber</title>
+  <meta name="description" content="Apply to join the Buenos Aires Chamber of Commerce." />
+  <meta name="author" content="Santiago Cuadrado" />
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/chamber.css">
+
+  <link rel="stylesheet" href="styles/join.css">
+
+  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/join.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#joinForm">Skip to form</a>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="index.html" class="logo-link" aria-label="Buenos Aires Chamber Home">
+          <svg width="48" height="48" viewBox="0 0 100 100" role="img" aria-labelledby="logoTitle logoDesc">
+            <title id="logoTitle">BA Chamber logo</title>
+            <desc id="logoDesc">Circle with BA initials</desc>
+            <circle cx="50" cy="50" r="48" fill="#003366" />
+            <text x="50" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-size="36" fill="#ffcc00" font-weight="700">BA</text>
+          </svg>
+        </a>
+        <div class="site-title-group">
+          <span class="site-title">Buenos Aires Chamber</span>
+          <span class="site-sub">Join</span>
+        </div>
+      </div>
+
+      <nav class="primary-nav" role="navigation" aria-label="Primary Navigation">
+        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+        <ul id="primary-navigation" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html" aria-current="page">Join</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container join-page" id="main">
+    <h1>Apply to Join the Chamber</h1>
+    <p class="lead">Complete the form to request membership. Required fields are marked and will appear on the confirmation page.</p>
+
+    <div class="join-layout">
+      <form id="joinForm" class="join-form" method="get" action="thankyou.html" novalidate>
+        <label>
+          First name
+          <input type="text" name="firstName" id="firstName" title="Applicant first name" autocomplete="given-name" required>
+        </label>
+
+        <label>
+          Last name
+          <input type="text" name="lastName" id="lastName" title="Applicant last name" autocomplete="family-name" required>
+        </label>
+
+        <label>
+          Organizational title
+          <input type="text" name="orgTitle" id="orgTitle" title="Organizational title (min 7 letters; letters, hyphens, spaces only)"
+                 autocomplete="organization-title" pattern="^[A-Za-z\s-]{7,}$" required placeholder="e.g. Program Coordinator">
+        </label>
+
+        <label>
+          Email address
+          <input type="email" name="email" id="email" title="Email address" autocomplete="email" required placeholder="name@example.com">
+        </label>
+
+        <label>
+          Mobile phone
+          <input type="tel" name="phone" id="phone" title="Mobile telephone number" autocomplete="tel" required placeholder="+54 11 5555 0000">
+        </label>
+
+        <label>
+          Organization name
+          <input type="text" name="organization" id="organization" title="Business or organization name" autocomplete="organization" required>
+        </label>
+
+        <fieldset class="membership-fieldset">
+          <legend>Membership Level (select one)</legend>
+
+          <label class="radio-label">
+            <input type="radio" name="membership" value="np" required>
+            NP Membership (Non-profit — no fee)
+          </label>
+
+          <label class="radio-label">
+            <input type="radio" name="membership" value="bronze">
+            Bronze Membership
+          </label>
+
+          <label class="radio-label">
+            <input type="radio" name="membership" value="silver">
+            Silver Membership
+          </label>
+
+          <label class="radio-label">
+            <input type="radio" name="membership" value="gold">
+            Gold Membership
+          </label>
+        </fieldset>
+
+        <label>
+          Organization description
+          <textarea name="description" id="description" title="Short description of the organization" rows="5"></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp" aria-hidden="true">
+
+        <div class="form-actions">
+          <input type="submit" value="Apply Now">
+        </div>
+
+        <p class="note">You can also download the project assignment document: <a href="/mnt/data/W01 Assignment.docx">Download W01 Assignment</a></p>
+      </form>
+
+      <aside class="membership-cards" aria-label="Membership cards">
+        <div class="cards-intro">
+          <h2>Membership Levels</h2>
+          <p>Choose the membership level that's right for your organization. Click <em>More info</em> for benefits.</p>
+        </div>
+
+        <div class="cards" id="membershipCards" aria-hidden="false">
+          <article class="card card-np" tabindex="0">
+            <h3>NP Membership</h3>
+            <p>No fee — for non-profit organizations</p>
+            <a href="#" class="more-info" data-dialog="dlg-np">More info</a>
+          </article>
+
+          <article class="card card-bronze" tabindex="0">
+            <h3>Bronze Membership</h3>
+            <p>Basic benefits and listing</p>
+            <a href="#" class="more-info" data-dialog="dlg-bronze">More info</a>
+          </article>
+
+          <article class="card card-silver" tabindex="0">
+            <h3>Silver Membership</h3>
+            <p>Extra exposure and event discounts</p>
+            <a href="#" class="more-info" data-dialog="dlg-silver">More info</a>
+          </article>
+
+          <article class="card card-gold" tabindex="0">
+            <h3>Gold Membership</h3>
+            <p>Premium placement and maximum visibility</p>
+            <a href="#" class="more-info" data-dialog="dlg-gold">More info</a>
+          </article>
+        </div>
+      </aside>
+    </div>
+
+    <dialog id="dlg-np" aria-labelledby="np-title">
+      <h3 id="np-title">NP Membership — Benefits</h3>
+      <ul>
+        <li>Free listing in the directory</li>
+        <li>Access to community resources</li>
+        <li>Invitations to volunteer-based events</li>
+      </ul>
+      <button class="dialog-close">Close</button>
+    </dialog>
+
+    <dialog id="dlg-bronze" aria-labelledby="bronze-title">
+      <h3 id="bronze-title">Bronze Membership — Benefits</h3>
+      <ul>
+        <li>Directory listing with logo</li>
+        <li>Invitation to quarterly meetups</li>
+        <li>Access to training materials</li>
+      </ul>
+      <button class="dialog-close">Close</button>
+    </dialog>
+
+    <dialog id="dlg-silver" aria-labelledby="silver-title">
+      <h3 id="silver-title">Silver Membership — Benefits</h3>
+      <ul>
+        <li>Spotlight position on the home page</li>
+        <li>Discounts on event fees</li>
+        <li>Priority registration for workshops</li>
+      </ul>
+      <button class="dialog-close">Close</button>
+    </dialog>
+
+    <dialog id="dlg-gold" aria-labelledby="gold-title">
+      <h3 id="gold-title">Gold Membership — Benefits</h3>
+      <ul>
+        <li>Featured homepage banner slot</li>
+        <li>Dedicated social media promotion</li>
+        <li>Free invitations to premium events</li>
+      </ul>
+      <button class="dialog-close">Close</button>
+    </dialog>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="contact">
+        <p><strong>Buenos Aires Chamber of Commerce</strong></p>
+        <p>Contact: Santiago Cuadrado — <a href="mailto:youremail@example.com">santiagocuadradosud247@gmail.com</a></p>
+        <p>WDD 231 — Web & Computer Programming</p>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; <span id="currentYear"></span> Buenos Aires Chamber</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
