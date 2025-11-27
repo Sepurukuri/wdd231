@@ -1,0 +1,33 @@
+:root {
+  --primary: #003366;
+  --secondary: #ffcc00;
+  --text-dark: #222;
+  --bg-light: #f7f9fb;
+  --body-font: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  margin: 0 auto;
+  max-width: 900px;
+  background: var(--bg-light);
+  padding: 1.5rem;
+  color: var(--text-dark);
+}
+
+h1, h2, h3 {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+svg text {
+  font-family: var(--body-font);
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
