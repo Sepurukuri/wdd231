@@ -1,33 +1,76 @@
-:root {
+:root{
   --primary: #003366;
-  --secondary: #ffcc00;
-  --text-dark: #222;
-  --bg-light: #f7f9fb;
-  --body-font: 'Roboto', sans-serif;
+  --accent: #ffcc00;
+  --bg: #f7fafc;
+  --text: #222222;
+  --card-bg: #ffffff;
+  --radius: 8px;
+  --container: 1100px;
+  --font: 'Roboto', sans-serif;
 }
 
-body {
-  font-family: var(--body-font);
-  margin: 0 auto;
-  max-width: 900px;
-  background: var(--bg-light);
-  padding: 1.5rem;
-  color: var(--text-dark);
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: var(--font);
+  line-height:1.6;
+  background:var(--bg);
+  color:var(--text);
+  padding:1.25rem;
+  display:block;
 }
 
-h1, h2, h3 {
-  color: var(--primary);
-  font-weight: 700;
+.container{
+  max-width:var(--container);
+  margin:0 auto;
 }
 
-svg text {
-  font-family: var(--body-font);
+/* Header */
+.sp-header .container{
+  display:flex;
+  flex-direction:column;
+  gap:.25rem;
+  margin-bottom:1rem;
+}
+h1{
+  margin:0 0 .25rem 0;
+  color:var(--primary);
+  font-size:1.6rem;
+}
+.subtitle{
+  margin:0;
+  color:var(--text);
+  opacity:.85;
 }
 
-section {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 8px;
-  border: 1px solid #e5e5e5;
+/* Sections */
+section{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  padding:1rem;
+  margin-bottom:1rem;
+  border:1px solid #e9eef6;
 }
+h2{ color:var(--primary); margin-top:0; font-size:1.15rem; }
+h3{ color:var(--primary); margin-bottom:0.5rem; font-size:1rem; }
+
+/* lead paragraph */
+.lead{ font-size:1rem; margin-top:0; }
+
+/* Color swatches */
+.color-swatch{ display:flex; gap:0.5rem; margin-top:0.5rem; align-items:center; flex-wrap:wrap; }
+.swatch{ padding:.5rem .75rem; border-radius:6px; color:#fff; font-weight:700; font-size:.9rem; }
+.swatch-blue{ background:var(--primary); color:#fff; }
+.swatch-yellow{ background:var(--accent); color:#003366; }
+.swatch-bg{ background:#ffffff; color:#003366; border:1px solid #e6eef8; }
+
+/* wireframe block */
+.wireframe{ padding:0.5rem 0; display:flex; justify-content:center; }
+.wireframe svg{ max-width:100%; height:auto; background:#fff; border-radius:6px; }
+
+/* notes */
+.wireframe-note{ font-size:.95rem; color:#444; margin-top:.5rem; }
+
+/* footer */
+.sp-footer{ margin-top:1rem; text-align:center; color:#555; font-size:.95rem; }
