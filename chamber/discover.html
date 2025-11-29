@@ -3,10 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Discover — Buenos Aires Chamber</title>
-  <meta name="description" content="Discover key attractions, landmarks, and business highlights around Buenos Aires with the Buenos Aires Chamber of Commerce.">
+
+  <meta name="description" content="Discover key attractions, landmarks, and cultural highlights around Buenos Aires with the Buenos Aires Chamber of Commerce.">
+  <meta name="author" content="Santiago Cuadrado">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Discover Buenos Aires — Landmarks, Culture & Local Highlights">
+  <meta property="og:description" content="Explore attractions, cultural sites, and business highlights around Buenos Aires. Discover what makes this vibrant city a great place to live, visit, and grow your business.">
+  <meta property="og:image" content="https://sepurukuri.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://sepurukuri.github.io/wdd231/chamber/discover.html">
 
   <link rel="icon" href="images/favicon.ico">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -15,7 +27,7 @@
   <link rel="stylesheet" href="styles/chamber.css">
   <link rel="stylesheet" href="styles/discover.css">
 
-  <script defer type="module" src="scripts/discover.js"></script>
+  <script type="module" src="scripts/discover.js"></script>
   <script defer src="scripts/navigation.js"></script>
   <script defer src="scripts/date.js"></script>
 </head>
@@ -59,9 +71,13 @@
   <main class="container discover-page">
     <h1>Discover Buenos Aires</h1>
 
-    <section id="visitMessage" class="visit-message"></section>
+    <section id="visitMessage" class="visit-message">
+      <h2 class="visually-hidden">Visit Message</h2>
+    </section>
 
-    <section id="discoverGrid" class="discover-grid"></section>
+    <section id="discoverGrid" class="discover-grid">
+      <h2 class="visually-hidden">Discover Grid</h2>
+    </section>
   </main>
 
   <footer class="site-footer">
