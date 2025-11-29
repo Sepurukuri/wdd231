@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Discover — Buenos Aires Chamber</title>
+  <meta name="description" content="Discover key attractions, landmarks, and business highlights around Buenos Aires with the Buenos Aires Chamber of Commerce.">
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/chamber.css">
+  <link rel="stylesheet" href="styles/discover.css">
+
+  <script defer type="module" src="scripts/discover.js"></script>
+  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/date.js"></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#discoverGrid">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="index.html" class="logo-link" aria-label="Buenos Aires Chamber Home">
+          <svg width="48" height="48" viewBox="0 0 100 100" role="img" aria-labelledby="logoTitle logoDesc">
+            <title id="logoTitle">BA Chamber logo</title>
+            <desc id="logoDesc">Circle with BA initials</desc>
+            <circle cx="50" cy="50" r="48" fill="#003366" />
+            <text x="50" y="58" text-anchor="middle" font-family="Roboto" font-size="36" fill="#ffcc00" font-weight="700">BA</text>
+          </svg>
+        </a>
+        <div class="site-title-group">
+          <span class="site-title">Buenos Aires Chamber</span>
+          <span class="site-sub">Discover</span>
+        </div>
+      </div>
+
+      <nav class="primary-nav" aria-label="Primary Navigation">
+        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+        <ul id="primary-navigation" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html" aria-current="page">Discover</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container discover-page">
+    <h1>Discover Buenos Aires</h1>
+
+    <section id="visitMessage" class="visit-message"></section>
+
+    <section id="discoverGrid" class="discover-grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="contact">
+        <p><strong>Buenos Aires Chamber of Commerce</strong></p>
+        <p>Contact: Santiago Cuadrado — <a href="mailto:santiagocuadradosud247@gmail.com">santiagocuadradosud247@gmail.com</a></p>
+        <p>WDD 231 — Web & Computer Programming</p>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; <span id="currentYear"></span> Buenos Aires Chamber</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

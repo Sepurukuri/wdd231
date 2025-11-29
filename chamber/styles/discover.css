@@ -1,0 +1,104 @@
+.discover-page h1 { margin-bottom: 1rem; }
+
+/* Visit message */
+.visit-message {
+  background: #fffae6;
+  border-left: 4px solid #ffcc00;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  color: #333;
+}
+
+.discover-card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.discover-card:focus-within,
+.discover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.discover-card h2 { margin: 0; font-size: 1.05rem; color: #003366; }
+.discover-card address { font-style: normal; color: #555; font-size: .95rem; }
+.discover-card p { margin: 0; color: #333; font-size: .95rem; }
+
+.discover-card figure { margin: 0; overflow: hidden; border-radius: 8px; }
+.discover-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform .25s ease, filter .25s ease;
+  will-change: transform;
+}
+
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "f"
+    "g"
+    "h";
+}
+.discover-card:nth-child(1){ grid-area: a; }
+.discover-card:nth-child(2){ grid-area: b; }
+.discover-card:nth-child(3){ grid-area: c; }
+.discover-card:nth-child(4){ grid-area: d; }
+.discover-card:nth-child(5){ grid-area: e; }
+.discover-card:nth-child(6){ grid-area: f; }
+.discover-card:nth-child(7){ grid-area: g; }
+.discover-card:nth-child(8){ grid-area: h; }
+
+@media (min-width:641px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f"
+      "g h";
+  }
+  .discover-card img:hover {
+    transform: scale(1.04);
+    filter: saturate(1.05);
+  }
+}
+
+@media (min-width:1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "a b c d"
+      "e f g h";
+  }
+  .discover-card img:hover {
+    transform: scale(1.06);
+    filter: saturate(1.06);
+  }
+}
+
+/* Learn button */
+.learn-btn {
+  background: #003366;
+  color: #ffcc00;
+  border: none;
+  padding: .5rem .75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.learn-btn:focus { outline: 3px solid rgba(0,51,102,0.15); }
