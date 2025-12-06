@@ -23,18 +23,80 @@
 }
 
 /* ============================
-   EVENTS PAGE LAYOUT
+   FORM CARD (Registration)
 =============================== */
 
-.events-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
+.form-card {
+  max-width: 550px;
+  margin: 0 auto 3rem auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+}
+
+/* Force clean vertical layout */
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-card label {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 1rem;
+}
+
+/* Input styling */
+.form-card input,
+.form-card select,
+.form-card textarea {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+  outline: none;
+  border-color: #1e73be;
+  box-shadow: 0 0 0 3px rgba(30,115,190,0.15);
+}
+
+/* Button */
+.cta-btn {
+  margin-top: 0.5rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  background: #1e73be;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cta-btn:hover {
+  background: #155a93;
 }
 
 /* ============================
-   EVENT CARDS
+   EVENTS — CARDS
 =============================== */
+
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
 
 .event-card {
   background: #ffffff;
@@ -66,64 +128,8 @@
 .event-card .date {
   font-size: 0.95rem;
   font-weight: bold;
-  color: var(--accent);
+  color: var(--accent, #1e73be);
   margin-bottom: .5rem;
-}
-
-/* ============================
-   REGISTRATION FORM
-=============================== */
-
-.registration-form {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.registration-form .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.registration-form label {
-  font-weight: 600;
-}
-
-.registration-form input,
-.registration-form select,
-.registration-form textarea {
-  width: 100%;
-  padding: .65rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: #fefefe;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-.registration-form textarea {
-  resize: vertical;
-}
-
-.registration-form button {
-  margin-top: .5rem;
-  padding: .8rem;
-  border-radius: 8px;
-  font-size: 1.05rem;
-  border: none;
-  background: var(--accent);
-  color: white;
-  cursor: pointer;
-  transition: background .2s ease;
-}
-
-.registration-form button:hover {
-  background: #005bb5;
 }
 
 /* ============================
