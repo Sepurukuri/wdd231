@@ -1,9 +1,9 @@
 {
   "programs": [
-    { "id":"p01","name":"Ball Control Basics","ageGroup":"6-8","schedule":"Mon & Wed 17:00-18:00","coach":"Martín López","fee":"$3000/mo","image":"images/programs/p01.jpg","description":"Develop ball touches and coordination with fun progressions." },
-    { "id":"p02","name":"Small-Sided Games","ageGroup":"6-8","schedule":"Tue & Thu 17:00-18:00","coach":"Lucía Fernández","fee":"$3000/mo","image":"images/programs/p02.jpg","description":"Learn positioning and decision-making through 3v3 and 4v4." },
-    { "id":"p03","name":"Shooting & Finishing","ageGroup":"9-11","schedule":"Mon & Wed 17:30-19:00","coach":"Diego Ramírez","fee":"$3500/mo","image":"images/programs/p03.jpg","description":"Finishing techniques: 1v1 decisions, placement and power." },
-    { "id":"p04","name":"Passing & Movement","ageGroup":"9-11","schedule":"Tue & Thu 17:30-19:00","coach":"Ana Gómez","fee":"$3500/mo","image":"images/programs/p04.jpg","description":"Passing patterns and moving off the ball to create space." },
-    { "id":"p05","name":"Recovery & Mobility","ageGroup":"All","schedule":"Mon 19:30-20:00","coach":"Lucía Fernández","fee":"$1500/mo","image":"images/programs/p05.jpg","description":"Recovery routines, mobility and injury prevention for young athletes." }
+    { "id":"p01","name":"Ball Control Basics","ageGroup":"6-8","schedule":"Mon & Wed 17:00-18:00","coach":"Martín López","fee":"$3000/mo","image":"images/p01.jpg","description":"Develop ball touches and coordination with fun progressions." },
+    { "id":"p02","name":"Small-Sided Games","ageGroup":"6-8","schedule":"Tue & Thu 17:00-18:00","coach":"Lucía Fernández","fee":"$3000/mo","image":"images/p02.jpg","description":"Learn positioning and decision-making through 3v3 and 4v4." },
+    { "id":"p03","name":"Shooting & Finishing","ageGroup":"9-11","schedule":"Mon & Wed 17:30-19:00","coach":"Diego Ramírez","fee":"$3500/mo","image":"images/p03.jpg","description":"Finishing techniques: 1v1 decisions, placement and power." },
+    { "id":"p04","name":"Passing & Movement","ageGroup":"9-11","schedule":"Tue & Thu 17:30-19:00","coach":"Ana Gómez","fee":"$3500/mo","image":"images/p04.jpg","description":"Passing patterns and moving off the ball to create space." },
+    { "id":"p05","name":"Recovery & Mobility","ageGroup":"All","schedule":"Mon 19:30-20:00","coach":"Lucía Fernández","fee":"$1500/mo","image":"images/p05.jpg","description":"Recovery routines, mobility and injury prevention for young athletes." }
   ]
 }
