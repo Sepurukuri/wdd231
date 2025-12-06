@@ -25,7 +25,8 @@ function showList(list){
       card.className = 'card program-card';
       card.innerHTML = `
          <div class="program-media media-ratio">
-           <img data-src="${p.image || 'images/placeholder-program.jpg'}" alt="${p.name}" class="responsive-img" />
+           <img data-src="${p.image || 'images/placeholder-program.jpg'}"
+alt="${p.name}" class="responsive-img" />
          </div>
          <div class="program-info">
            <h3>${p.name}</h3>

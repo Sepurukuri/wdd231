@@ -4,6 +4,36 @@
     { "id":"p02","name":"Small-Sided Games","ageGroup":"6-8","schedule":"Tue & Thu 17:00-18:00","coach":"Lucía Fernández","fee":"$3000/mo","image":"images/p02.jpg","description":"Learn positioning and decision-making through 3v3 and 4v4." },
     { "id":"p03","name":"Shooting & Finishing","ageGroup":"9-11","schedule":"Mon & Wed 17:30-19:00","coach":"Diego Ramírez","fee":"$3500/mo","image":"images/p03.jpg","description":"Finishing techniques: 1v1 decisions, placement and power." },
     { "id":"p04","name":"Passing & Movement","ageGroup":"9-11","schedule":"Tue & Thu 17:30-19:00","coach":"Ana Gómez","fee":"$3500/mo","image":"images/p04.jpg","description":"Passing patterns and moving off the ball to create space." },
-    { "id":"p05","name":"Recovery & Mobility","ageGroup":"All","schedule":"Mon 19:30-20:00","coach":"Lucía Fernández","fee":"$1500/mo","image":"images/p05.jpg","description":"Recovery routines, mobility and injury prevention for young athletes." }
-  ]
+    { "id":"p05","name":"Recovery & Mobility","ageGroup":"All","schedule":"Mon 19:30-20:00","coach":"Lucía Fernández","fee":"$1500/mo","image":"images/p05.jpg","description":"Recovery routines, mobility and injury prevention for young athletes." },
+    {
+        "id":"p06","name":"U17 Elite: Attacking Shape","ageGroup":"15-17","schedule":"Wed 19:30-21:00","coach":"Diego Ramírez","fee":"$4500/mo","image":"images/p06.jpg","description":"Developing chemistry between midfield and forwards, set piece execution, and advanced combination play."
+    },
+    {
+        "id":"p07","name":"Goalkeeping: Foundation","ageGroup":"8-12","schedule":"Sat 09:00-10:30","coach":"Lucía Fernández","fee":"$3200/mo","image":"images/p07.jpg","description":"Covers basic diving, catching technique, distribution skills (hands and feet), and commanding the box."
+    },
+    {
+        "id":"p08","name":"Goalkeeping: Advanced","ageGroup":"13-17","schedule":"Sat 10:30-12:00","coach":"Lucía Fernández","fee":"$4200/mo","image":"images/p08.jpg","description":"Focuses on shot stopping, penalty saves, dealing with crosses, and advanced communication with the back line."
+    },
+    {
+        "id":"p09","name":"U8: Technical Dribbling","ageGroup":"7-8","schedule":"Fri 17:00-18:00","coach":"Ana Gómez","fee":"$3000/mo","image":"images/p09.jpg","description":"Mastery of specific dribbling moves (scissors, step-overs) to beat defenders in 1v1 situations."
+    },
+    {
+        "id":"p10","name":"U10: Physical Literacy","ageGroup":"9-10","schedule":"Thu 16:30-17:30","coach":"Martín López","fee":"$2800/mo","image":"images/p10.jpg","description":"General athletic development focused on speed, agility, and balance, minimizing risk of injury."
+    },
+    {
+        "id":"p11","name":"U12: Positional Play (Rondo)","ageGroup":"11-12","schedule":"Fri 17:30-19:00","coach":"Diego Ramírez","fee":"$3800/mo","image":"images/p11.jpg","description":"Training concepts of possession, pressing triggers, and circulating the ball using Rondo drills."
+    },
+    {
+        "id":"p12","name":"U14: Transitional Play","ageGroup":"13-14","schedule":"Tue 19:00-20:30","coach":"Ana Gómez","fee":"$4000/mo","image":"images/p12.jpg","description":"Rapid transitions from defense to attack and vice versa, emphasizing quick decision-making and counter-attacking."
+    },
+    {
+        "id":"p13","name":"U17: Mental Toughness","ageGroup":"15-17","schedule":"Mon 19:00-20:00","coach":"Lucía Fernández","fee":"$2000/mo","image":"images/p13.jpg","description":"Session dedicated to sports psychology, leadership, pressure management, and game focus."
+    },
+    {
+        "id":"p14","name":"U6: Fun & Games","ageGroup":"5-6","schedule":"Sat 10:00-11:00","coach":"Martín López","fee":"$2500/mo","image":"images/p14.jpg","description":"A relaxed session focused purely on enjoying the game and basic motor skills development."
+    },
+    {
+        "id":"p15","name":"Fitness & Injury Prevention","ageGroup":"All","schedule":"Wed 19:00-20:00","coach":"Diego Ramírez","fee":"$2000/mo","image":"images/p15.jpg","description":"Strength and conditioning program tailored for youth soccer players to build endurance and mobility."
+    }
+]
 }
