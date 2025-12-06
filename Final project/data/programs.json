@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "U6 Fundamentals",
+        "age": "4–6 years",
+        "days": "Tuesdays & Thursdays",
+        "coach": "Coach Ramirez",
+        "image": "images/u6.jpg",
+        "description": "An introductory program focused on fun, coordination, and basic ball skills. Perfect for beginners discovering soccer."
+    },
+    {
+        "id": 2,
+        "title": "U8 Development",
+        "age": "6–8 years",
+        "days": "Mondays & Wednesdays",
+        "coach": "Coach Torres",
+        "image": "images/u8.jpg",
+        "description": "This level builds foundational skills such as dribbling, passing, and teamwork. Great for young players gaining confidence."
+    },
+    {
+        "id": 3,
+        "title": "U10 Intermediate",
+        "age": "8–10 years",
+        "days": "Tuesday, Thursday & Friday",
+        "coach": "Coach Fernández",
+        "image": "images/u10.jpg",
+        "description": "Players are introduced to intermediate mechanics including ball control, defensive positioning, and small tactical ideas."
+    },
+    {
+        "id": 4,
+        "title": "U12 Competitive",
+        "age": "10–12 years",
+        "days": "Monday to Friday",
+        "coach": "Coach Alvarez",
+        "image": "images/u12.jpg",
+        "description": "Designed for advanced young athletes looking to play competitively. Includes conditioning, tactics, and tournament preparation."
+    },
+    {
+        "id": 5,
+        "title": "Goalkeeper Academy",
+        "age": "8–14 years",
+        "days": "Wednesdays & Saturdays",
+        "coach": "Coach González",
+        "image": "images/goalkeeper.jpg",
+        "description": "A specialized program focused on shot-stopping, footwork, distribution, and goalkeeper-specific fitness."
+    }
+]

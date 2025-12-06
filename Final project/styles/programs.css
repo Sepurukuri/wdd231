@@ -1,0 +1,11 @@
+#program-container {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+.program-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 5px solid #003366;
+}

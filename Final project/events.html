@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration & Events – South Buenos Aires Youth Soccer Academy</title>
+
+    <meta name="description" content="Register for youth soccer programs and view upcoming events.">
+    <meta name="author" content="Your Name">
+
+    <meta property="og:title" content="Registration & Events">
+    <meta property="og:description" content="Sign up and check soccer events.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/events.css">
+    <link rel="stylesheet" href="styles/modal.css">
+</head>
+
+<body>
+<header>
+    <h1>Registration & Events</h1>
+    <nav>
+        <button id="menu"></button>
+        <ul id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="events.html" class="active">Registration & Events</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Register Now</h2>
+        <form id="register-form" action="form-action.html" method="get">
+            <label>Name<input type="text" name="name" required></label>
+            <label>Age<input type="number" name="age" required></label>
+            <label>Email<input type="email" name="email" required></label>
+            <label>Program
+                <select name="program" required></select>
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Upcoming Events</h2>
+        <div id="events-container"></div>
+    </section>
+</main>
+
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <button id="close-modal">X</button>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; <span id="year"></span> South Buenos Aires Youth Soccer Academy</p>
+    <a href="attributions.html">Attributions</a>
+</footer>
+
+<script type="module" src="scripts/events.js"></script>
+</body>
+</html>

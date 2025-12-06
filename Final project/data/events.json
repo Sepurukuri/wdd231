@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Summer Kickoff Tournament",
+        "date": "2025-01-15",
+        "location": "Parque Patricios Stadium",
+        "category": "Tournament",
+        "description": "A friendly tournament to start the season featuring local youth teams from southern Buenos Aires."
+    },
+    {
+        "id": 2,
+        "name": "Parents Information Night",
+        "date": "2025-02-03",
+        "location": "Academy Training Center",
+        "category": "Meeting",
+        "description": "An informative session for parents to learn about training expectations, safety, and upcoming competitions."
+    },
+    {
+        "id": 3,
+        "name": "Mid-Season Skills Challenge",
+        "date": "2025-03-22",
+        "location": "Villa Lugano Fields",
+        "category": "Competition",
+        "description": "Players compete in dribbling, passing, and shooting events to test improvement and earn academy badges."
+    },
+    {
+        "id": 4,
+        "name": "Coaches Workshop Day",
+        "date": "2025-04-10",
+        "location": "Academy Indoor Hall",
+        "category": "Training",
+        "description": "A full-day event where the coaching staff participates in workshops to update training methods and techniques."
+    },
+    {
+        "id": 5,
+        "name": "End of Season Exhibition",
+        "date": "2025-05-30",
+        "location": "San Lorenzo Youth Complex",
+        "category": "Showcase",
+        "description": "All academy groups present what they learned throughout the season in an organized showcase for families."
+    }
+]

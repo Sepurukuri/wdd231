@@ -1,0 +1,8 @@
+.hero {
+    text-align: center;
+    padding: 1rem;
+}
+.hero img {
+    width: 100%;
+    border-radius: 10px;
+}
