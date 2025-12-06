@@ -1,11 +1,116 @@
-#program-container {
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
+.hero.hero-small {
+  background: linear-gradient(
+      90deg,
+      rgba(30,115,190,0.15),
+      rgba(30,115,190,0.05)
+    ),
+    url("../images/training-field.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
+
+.hero.hero-small h1 {
+  color: white;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.35);
+  font-size: 2.2rem;
+}
+
+/* Program Grid */
+
+.programs {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+}
+
+.filters-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+  height: fit-content;
+}
+
+.filters-box h2 {
+  margin-top: 0;
+}
+
+.filters-box label {
+  display: block;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.filters-box select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.program-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
 .program-card {
-    background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    border-left: 5px solid #003366;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.program-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.program-card h3 {
+  margin-top: 0;
+}
+
+.program-card p {
+  margin-bottom: .5rem;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .programs {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero.hero-small h1 {
+    font-size: 1.7rem;
+  }
 }

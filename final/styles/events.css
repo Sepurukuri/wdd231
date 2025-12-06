@@ -1,9 +1,101 @@
-#events-container {
-    display: grid;
-    gap: 1rem;
+.hero.hero-small {
+  background: linear-gradient(
+      90deg,
+      rgba(255,195,0,0.35),
+      rgba(30,115,190,0.15)
+    ),
+    url("../images/events-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
+
+.hero.hero-small h1 {
+  color: white;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.35);
+  font-size: 2.2rem;
+}
+
+/* Layout */
+
+.events-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+/* Event Cards */
+
 .event-card {
-    background: white;
-    border-radius: 8px;
-    padding: 1rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.event-card h3 {
+  margin-top: 0;
+}
+
+.event-card .date {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: .5rem;
+}
+
+/* Registration Form */
+
+.registration-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.registration-form label {
+  font-weight: 600;
+  margin-top: .5rem;
+  display: block;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+  width: 100%;
+  padding: .6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: .25rem;
+}
+
+.registration-form button {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .events-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero.hero-small h1 {
+    font-size: 1.7rem;
+  }
 }

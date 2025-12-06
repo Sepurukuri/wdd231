@@ -1,42 +1,9 @@
-[
-    {
-        "id": 1,
-        "name": "Summer Kickoff Tournament",
-        "date": "2025-01-15",
-        "location": "Parque Patricios Stadium",
-        "category": "Tournament",
-        "description": "A friendly tournament to start the season featuring local youth teams from southern Buenos Aires."
-    },
-    {
-        "id": 2,
-        "name": "Parents Information Night",
-        "date": "2025-02-03",
-        "location": "Academy Training Center",
-        "category": "Meeting",
-        "description": "An informative session for parents to learn about training expectations, safety, and upcoming competitions."
-    },
-    {
-        "id": 3,
-        "name": "Mid-Season Skills Challenge",
-        "date": "2025-03-22",
-        "location": "Villa Lugano Fields",
-        "category": "Competition",
-        "description": "Players compete in dribbling, passing, and shooting events to test improvement and earn academy badges."
-    },
-    {
-        "id": 4,
-        "name": "Coaches Workshop Day",
-        "date": "2025-04-10",
-        "location": "Academy Indoor Hall",
-        "category": "Training",
-        "description": "A full-day event where the coaching staff participates in workshops to update training methods and techniques."
-    },
-    {
-        "id": 5,
-        "name": "End of Season Exhibition",
-        "date": "2025-05-30",
-        "location": "San Lorenzo Youth Complex",
-        "category": "Showcase",
-        "description": "All academy groups present what they learned throughout the season in an organized showcase for families."
-    }
-]
+{
+  "events": [
+    { "id":"e01","title":"Open Tryouts — Season 2026","date":"2025-12-15","time":"10:00","location":"Municipal Field, Av. Rivadavia 1234","description":"Open trials for U9–U15 players. Bring water and cleats." },
+    { "id":"e02","title":"Inter-Academy Friendly Tournament","date":"2026-01-10","time":"09:00","location":"Polideportivo Sur","description":"Friendly matches between local academies across multiple age categories." },
+    { "id":"e03","title":"Community Play Day","date":"2025-12-20","time":"10:00","location":"Neighborhood Park","description":"Family-friendly open play and mini-games for all ages." },
+    { "id":"e04","title":"Coaches Workshop Day","date":"2026-02-14","time":"09:00","location":"Academy Indoor Hall","description":"Professional development for coaches — training methods and safety." },
+    { "id":"e05","title":"End-of-Season Exhibition","date":"2026-05-30","time":"10:00","location":"San Lorenzo Youth Complex","description":"Showcase matches where players demonstrate skills and team play." }
+  ]
+}

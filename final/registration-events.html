@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration & Events | South BA Academy</title>
+    <meta name="description" content="Register for training programs and explore upcoming soccer events in South Buenos Aires.">
+    <meta name="author" content="Your Name">
+
+    <meta property="og:title" content="Registration & Events — South BA">
+    <meta property="og:description" content="Player registration and upcoming soccer events.">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/registration.css">
+    <script type="module" src="scripts/registration.js" defer></script>
+</head>
+
+<body>
+<header>
+    <div class="logo-area">
+        <img src="images/logo.png" alt="Academy Logo" class="logo">
+        <h1>South BA Youth Soccer Academy</h1>
+    </div>
+
+    <nav>
+        <button id="menu-btn" aria-label="Open Menu">☰</button>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a class="active" href="registration-events.html">Registration & Events</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2 class="page-title">Player Registration</h2>
+
+    <div class="form-card">
+        <form action="form-action.html" method="GET" id="registration-form">
+
+            <label>
+                Player Name
+                <input type="text" name="player" required>
+            </label>
+
+            <label>
+                Age
+                <input type="number" name="age" min="5" max="17" required>
+            </label>
+
+            <label>
+                Parent/Guardian Email
+                <input type="email" name="email" required>
+            </label>
+
+            <label>
+                Select Program
+                <select name="program" required>
+                    <option value="">-- Choose One --</option>
+                    <option value="U6 Juniors">U6 Juniors</option>
+                    <option value="U10 Development">U10 Development</option>
+                    <option value="U14 Advanced">U14 Advanced</option>
+                    <option value="U17 Elite">U17 Elite</option>
+                </select>
+            </label>
+
+            <button type="submit" class="cta-btn">Submit Registration</button>
+        </form>
+    </div>
+
+    <h2 class="page-title">Upcoming Events</h2>
+    <div id="events-section" class="card-grid"></div>
+
+</main>
+<footer>
+    <p>&copy; <span id="year"></span> South Buenos Aires Youth Soccer Academy</p>
+    <a href="attributions.html">Attributions</a>
+</footer>
+</body>
+</html>

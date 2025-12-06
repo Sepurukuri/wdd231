@@ -3,56 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South Buenos Aires Youth Soccer Academy – Home</title>
-
-    <meta name="description" content="Official website of the South Buenos Aires Youth Soccer Academy. Learn about programs, events, and youth soccer development.">
+    <title>South Buenos Aires Youth Soccer Academy | Home</title>
+    <meta name="description" content="Youth soccer development academy in South Buenos Aires. Training, coaches, schedules, registration, and events.">
     <meta name="author" content="Your Name">
 
     <meta property="og:title" content="South Buenos Aires Youth Soccer Academy">
-    <meta property="og:description" content="Youth soccer training, development programs, and events in South Buenos Aires.">
+    <meta property="og:description" content="Training programs, age groups, schedules, and registration for youth soccer players in South Buenos Aires.">
     <meta property="og:type" content="website">
 
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/home.css">
+    <script type="module" src="scripts/home.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>South Buenos Aires Youth Soccer Academy</h1>
-        <nav>
-            <button id="menu"></button>
-            <ul id="nav-list">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="events.html">Registration & Events</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div class="logo-area">
+        <img src="images/logo.png" alt="Academy Logo" class="logo">
+        <h1>South BA Youth Soccer Academy</h1>
+    </div>
 
-    <main>
-        <section class="hero">
-            <img src="images/hero.webp" alt="Kids playing soccer" loading="lazy">
-            <h2>Developing Future Champions</h2>
-            <p id="greeting"></p>
-        </section>
+    <nav>
+        <button id="menu-btn" aria-label="Open Menu">☰</button>
+        <ul id="nav-links">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="registration-events.html">Registration & Events</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <section>
-            <h2>Welcome to Our Academy</h2>
-            <p>We provide high-quality youth soccer training for players ages 5–17 in the southern Buenos Aires region.</p>
-        </section>
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Where Young Talent Becomes Future Champions</h2>
+            <p>Professional training for future soccer stars ages 5–17.</p>
+            <a href="programs.html" class="cta-btn">Explore Programs</a>
+        </div>
+    </section>
 
-        <section class="weather">
-            <h2>Today’s Weather</h2>
-            <p id="weather"></p>
-        </section>
-    </main>
+    <section class="benefits">
+        <h2>Why Choose Our Academy?</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Professional Coaches</h3>
+                <p>Licensed trainers with experience in Argentine youth leagues.</p>
+            </div>
+            <div class="card">
+                <h3>Structured Growth</h3>
+                <p>Age-appropriate development programs focused on technique & teamwork.</p>
+            </div>
+            <div class="card">
+                <h3>Community & Values</h3>
+                <p>We promote sportsmanship, discipline, and lifelong passion for fútbol.</p>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; <span id="year"></span> South Buenos Aires Youth Soccer Academy</p>
-        <a href="attributions.html">Attributions</a>
-    </footer>
+    <section class="latest">
+        <h2>Upcoming Events</h2>
+        <div id="events-container" class="card-grid"></div>
+    </section>
+</main>
 
-    <script type="module" src="scripts/main.js"></script>
+<footer>
+    <p>&copy; <span id="year"></span> South Buenos Aires Youth Soccer Academy</p>
+    <a href="attributions.html">Attributions</a>
+</footer>
 </body>
 </html>

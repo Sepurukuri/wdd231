@@ -1,16 +1,60 @@
-.modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+  z-index:1000;
+  visibility:hidden;
+  opacity:0;
+  transition:opacity .18s ease, visibility .18s linear;
 }
-.hidden {
-    display: none;
+.modal-backdrop.open{
+  visibility:visible;
+  opacity:1;
 }
-.modal-content {
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
+
+.modal{
+  background:#fff;
+  width:100%;
+  max-width:760px;
+  border-radius:12px;
+  box-shadow:0 18px 60px rgba(2,6,23,0.28);
+  padding:1.25rem;
+  position:relative;
+}
+
+.modal .modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+  margin-bottom:.5rem;
+}
+.modal h2{ margin:0; font-size:1.25rem; }
+.modal .close-btn{
+  background:none;
+  border:0;
+  font-size:1.4rem;
+  color:#333;
+  cursor:pointer;
+}
+
+.modal .modal-body{
+  margin-top:.5rem;
+  color:#222;
+  line-height:1.5;
+  max-height:60vh;
+  overflow:auto;
+}
+
+/* focus trap and accessibility */
+:focus{ outline: 3px solid #ffd54a; outline-offset: 3px; }
+
+/* small screens */
+@media (max-width:520px){
+  .modal{ padding:.9rem; border-radius:10px; }
+  .modal h2{ font-size:1rem; }
 }

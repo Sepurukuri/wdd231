@@ -3,36 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programs – South Buenos Aires Youth Soccer Academy</title>
-
-    <meta name="description" content="Youth soccer training programs for all age groups.">
+    <title>Soccer Training Programs | South BA Academy</title>
+    <meta name="description" content="Detailed training programs for age groups 5–17. Technical drills, physical development, and structured soccer training.">
     <meta name="author" content="Your Name">
 
-    <meta property="og:title" content="Programs – Youth Soccer">
-    <meta property="og:description" content="Explore our youth soccer training programs.">
-    <meta property="og:type" content="website">
+    <meta property="og:title" content="Soccer Programs — South BA">
+    <meta property="og:description" content="Learn about our youth soccer training programs for ages 5–17.">
 
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/programs.css">
+    <script type="module" src="scripts/programs.js" defer></script>
 </head>
 
 <body>
 <header>
-    <h1>Our Programs</h1>
+    <div class="logo-area">
+        <img src="images/logo.png" alt="Academy Logo" class="logo">
+        <h1>South BA Youth Soccer Academy</h1>
+    </div>
+
     <nav>
-        <button id="menu"></button>
-        <ul id="nav-list">
+        <button id="menu-btn" aria-label="Open Menu">☰</button>
+        <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="programs.html" class="active">Programs</a></li>
-            <li><a href="events.html">Registration & Events</a></li>
+            <li><a class="active" href="programs.html">Programs</a></li>
+            <li><a href="registration-events.html">Registration & Events</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <h2>Training Programs</h2>
-    <div id="program-container"></div>
+    <h2 class="page-title">Training Programs</h2>
+
+    <div id="programs-container" class="card-grid"></div>
+
+    <dialog id="program-modal">
+        <div id="modal-content"></div>
+        <button id="close-modal">Close</button>
+    </dialog>
 </main>
 
 <footer>
@@ -40,6 +49,5 @@
     <a href="attributions.html">Attributions</a>
 </footer>
 
-<script type="module" src="scripts/programs.js"></script>
 </body>
 </html>

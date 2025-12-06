@@ -1,10 +1,27 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('#year').forEach(el => el.textContent = new Date().getFullYear());
 
-const greeting = document.getElementById("greeting");
-if (greeting) {
-    const hour = new Date().getHours();
-    greeting.textContent =
-        hour < 12 ? "Good morning!" :
-        hour < 18 ? "Good afternoon!" :
-        "Good evening!";
-}
+  const menuBtn = document.getElementById('menu-btn') || document.getElementById('menu');
+  const navLinks = document.getElementById('nav-links') || document.querySelector('nav ul');
+
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+    });
+  }
+
+  const skip = document.querySelector('.skip-link');
+  if (skip) {
+    skip.addEventListener('click', () => {
+      const main = document.querySelector('main');
+      if (main) main.focus();
+    });
+  }
+});
