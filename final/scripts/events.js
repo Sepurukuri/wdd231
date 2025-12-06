@@ -1,44 +1,88 @@
-import { fetchJSON } from './utils.js';
-import { openModal } from './modal.js';
-import { saveToLocal } from './storage.js';
+import { fetchJSON, formatDate } from "./utils.js";
+import { openModal } from "./modal.js";
 
-const EVENTS_JSON = 'data/events.json';
-const eventsContainer = document.getElementById('events-container') || document.getElementById('events-list') || document.getElementById('events-schedule');
+const EVENTS_JSON = "data/events.json";
+const eventsContainer = document.getElementById("events-list");
+const form = document.getElementById("registration-form");
 
-async function renderEvents(){
-  if(!eventsContainer) return;
+async function loadEvents() {
   const data = await fetchJSON(EVENTS_JSON);
-  if(!data || !Array.isArray(data.events)){
-    eventsContainer.innerHTML = '<p class="notice">No upcoming events at the moment.</p>';
+
+  if (!data || !Array.isArray(data.events)) {
+    eventsContainer.innerHTML = `<p class="notice">Events unavailable.</p>`;
     return;
   }
 
-  saveToLocal('sba_events', data.events);
+  renderEvents(data.events);
+}
 
-  eventsContainer.innerHTML = '';
-  data.events.forEach(ev => {
-    const el = document.createElement('article');
-    el.className = 'event-card';
-    el.innerHTML = `
-      <h3>${ev.title}</h3>
-      <p class="meta">${ev.date} • ${ev.time || ''}</p>
-      <p class="small">${ev.location}</p>
-      <p>${ev.description}</p>
-      <p style="margin-top:.6rem;"><button class="btn-event-details" data-id="${ev.id}">More details</button></p>
+function renderEvents(events) {
+  eventsContainer.innerHTML = "";
+
+  events.forEach((ev) => {
+    const card = document.createElement("article");
+    card.className = "event-card";
+
+    card.innerHTML = `
+      <div class="event-header">
+        <h3>${ev.title}</h3>
+        <span class="event-icon">⚽</span>
+      </div>
+
+      <p class="event-date">
+        <strong>Date:</strong> ${formatDate(ev.date)}
+      </p>
+
+      <p class="event-location">
+        <strong>Location:</strong> ${ev.location}
+      </p>
+
+      <p>${ev.summary}</p>
+
+      <button class="btn-outline" data-id="${ev.id}">
+        View details
+      </button>
     `;
-    eventsContainer.appendChild(el);
+
+    eventsContainer.appendChild(card);
   });
 }
 
-document.body.addEventListener('click', (e) => {
-  const btn = e.target.closest('.btn-event-details');
-  if(!btn) return;
+document.body.addEventListener("click", async (e) => {
+  const btn = e.target.closest("button[data-id]");
+  if (!btn) return;
+
   const id = btn.dataset.id;
-  const events = JSON.parse(localStorage.getItem('sba_events') || '[]');
-  const ev = events.find(x => String(x.id) === String(id));
-  if(ev){
-    openModal(ev.title, `<p><strong>Date:</strong> ${ev.date} ${ev.time ? '• ' + ev.time : ''}</p><p><strong>Location:</strong> ${ev.location}</p><p>${ev.description}</p>`);
-  }
+  const data = await fetchJSON(EVENTS_JSON);
+  const ev = data.events.find((x) => x.id === id);
+
+  if (!ev) return;
+
+  openModal(
+    ev.title,
+    `
+    <p><strong>Date:</strong> ${formatDate(ev.date)}</p>
+    <p><strong>Location:</strong> ${ev.location}</p>
+    <p><strong>Details:</strong></p>
+    <p>${ev.details}</p>
+    `
+  );
 });
 
-renderEvents();
+// Registration form handler
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const payload = Object.fromEntries(formData.entries());
+
+  openModal("Registration Received!", `
+    <p>Thank you, <strong>${payload.playerName}</strong>!</p>
+    <p>You are now registered for <strong>${payload.eventName}</strong>.</p>
+    <p>We will contact you at <strong>${payload.parentEmail}</strong>.</p>
+  `);
+
+  form.reset();
+});
+
+loadEvents();
