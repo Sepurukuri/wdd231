@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Submission</title>
-    <meta name="description" content="Form submission results.">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form Submission</title>
+   <meta name="description" content="Confirmation page for registration form submission with details of the entered data.">
 
-    <link rel="stylesheet" href="styles/base.css">
+   <link rel="icon" href="images/favicon.ico">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   
+   <link rel="stylesheet" href="styles/base.css">
 </head>
 
 <body>
 <header>
-    <h1>Registration Received</h1>
+   <h1>Registration Received</h1>
 </header>
 
 <main>
-    <p>Here is the information you submitted:</p>
+   <p>Here is the information you submitted:</p>
 
-    <ul id="results"></ul>
+   <ul id="results"></ul>
 
-    <a href="registration-events.html" class="cta-btn">Back to Registration</a>
+   <a href="registration-events.html" class="cta-btn">Back to Registration</a>
 </main>
 
 <script>
-    const params = new URLSearchParams(window.location.search);
-    const list = document.getElementById("results");
+   const params = new URLSearchParams(window.location.search);
+   const list = document.getElementById("results");
 
-    params.forEach((value, key) => {
-        const li = document.createElement("li");
-        li.textContent = `${key}: ${value}`;
-        list.appendChild(li);
-    });
+   params.forEach((value, key) => {
+      const li = document.createElement("li");
+      li.textContent = `${key}: ${value}`;
+      list.appendChild(li);
+   });
 </script>
 
 </body>

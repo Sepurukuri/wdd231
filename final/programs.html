@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soccer Training Programs | South BA Academy</title>
-    <meta name="description" content="Detailed training programs for age groups 5–17. Technical drills, physical development, and structured soccer training.">
-    <meta name="author" content="Your Name">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Soccer Training Programs | South BA Academy</title>
+   <meta name="description" content="Detailed training programs for age groups 5–17. Technical drills, physical development, and structured soccer training.">
+   <meta name="author" content="Your Name">
 
-    <meta property="og:title" content="Soccer Programs — South BA">
-    <meta property="og:description" content="Learn about our youth soccer training programs for ages 5–17.">
+   <meta property="og:title" content="Soccer Programs — South BA">
+   <meta property="og:description" content="Learn about our youth soccer training programs for ages 5–17.">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://https://sepurukuri.github.io/wdd231/final/final-project.html">
+   <meta property="og:image" content="https://Sepurukuri.github.io/wdd231/final/images/og-image.jpg">
 
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/programs.css">
-    <script type="module" src="scripts/programs.js" defer></script>
+   <link rel="icon" href="images/favicon.ico">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   
+   <link rel="stylesheet" href="styles/base.css">
+   <link rel="stylesheet" href="styles/programs.css">
+   <script type="module" src="scripts/programs.js" defer></script>
+   <script type="module" src="scripts/main.js" defer></script>
 </head>
 
 <body>
 <header>
-    <div class="logo-area">
-        <img src="images/logo.png" alt="Academy Logo" class="logo">
-        <h1>South BA Youth Soccer Academy</h1>
-    </div>
+   <div class="logo-area">
+      <img src="images/logo.png" alt="Academy Logo" class="logo">
+      <h1>South BA Youth Soccer Academy</h1>
+   </div>
 
-    <nav>
-        <button id="menu-btn" aria-label="Open Menu">☰</button>
-        <ul id="nav-links">
-            <li><a href="final-project.html">Home</a></li>
-            <li><a class="active" href="programs.html">Programs</a></li>
-            <li><a href="registration-events.html">Registration & Events</a></li>
-        </ul>
-    </nav>
+   <nav>
+      <button id="menu-btn" aria-label="Open Menu">☰</button>
+      <ul id="nav-links">
+         <li><a href="final-project.html">Home</a></li>
+         <li><a class="active" href="programs.html">Programs</a></li>
+         <li><a href="registration-events.html">Registration & Events</a></li>
+      </ul>
+   </nav>
 </header>
 
 <main>
-    <h2 class="page-title">Training Programs</h2>
+   <h2 class="page-title">Training Programs</h2>
 
-    <div id="programs-container" class="card-grid"></div>
+   <div id="programs-container" class="card-grid"></div>
 
-    <dialog id="program-modal">
-        <div id="modal-inner">
-            <button id="close-modal" aria-label="Close Program Details">&times;</button>
-            <div id="modal-content"></div>
-        </div>
-    </dialog>
+   <dialog id="program-modal">
+      <div id="modal-inner">
+         <button id="close-modal" aria-label="Close Program Details">&times;</button>
+         <div id="modal-content"></div>
+      </div>
+   </dialog>
 </main>
 
 <footer>
-    <p>&copy; <span id="year"></span> South Buenos Aires Youth Soccer Academy</p>
-    <a href="attributions.html">Attributions</a>
+   <p>&copy; <span id="year"></span> South Buenos Aires Youth Soccer Academy</p>
+   <a href="attributions.html">Attributions</a>
 </footer>
 
 </body>

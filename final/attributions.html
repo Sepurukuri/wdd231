@@ -3,42 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attributions – Youth Soccer Academy</title>
+    <title>Attributions & Resources – South BA Academy</title>
+    
+    <meta name="description" content="Detailed list of all image, font, and API resources used across the South Buenos Aires Youth Soccer Academy website.">
+    <meta name="author" content="Your Name">
 
-    <meta name="description" content="Attributions for images and resources used.">
-    <meta name="author" content="Santiago Cuadrado">
+    <link rel="icon" href="images/favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Attributions — South BA Soccer Academy">
+    <meta property="og:description" content="Review the sources for our site's images, fonts, and data services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://https://sepurukuri.github.io/wdd231/final/final-project.html">
+    <meta property="og:image" content="https://Sepurukuri.github.io/wdd231/final/images/og-image.jpg">
 
     <link rel="stylesheet" href="styles/base.css">
-</head>
+    <link rel="stylesheet" href="styles/attributions.css"> 
 
+    <script type="module" src="scripts/main.js" defer></script>
+</head>
 <body>
-<header><h1>Attributions</h1></header>
+<header>
+    <div class="logo-area">
+        <img src="images/logo.png" alt="Academy Logo" class="logo">
+        <h1>Attributions & Resources</h1>
+    </div>
+</header>
 
 <main>
+    <h2 class="page-title">Resource Attributions</h2>
+    
     <section>
-        <h2>Images</h2>
+        <h3>Images</h3>
         <ul>
-            <li>Unsplash – Free images</li>
+            <li>Unsplash – Free images (Used for all program and event images)</li>
         </ul>
     </section>
 
     <section>
-        <h2>API</h2>
+        <h3>API Data</h3>
         <p>OpenWeatherMap API</p>
     </section>
 
     <section>
-        <h2>Fonts</h2>
+        <h3>Fonts</h3>
         <p>Google Fonts – Roboto</p>
     </section>
 </main>
 
 <footer>
-    <p>&copy; <span id="year"></span></p>
+    <p>&copy; <span id="year"></span> South Buenos Aires Youth Soccer Academy</p>
+    <a href="attributions.html">Attributions</a>
 </footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 </body>
 </html>
